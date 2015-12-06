@@ -1,4 +1,4 @@
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (C) 2015 takahirom
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,11 +14,12 @@
   ~ limitations under the License.
   -->
 
-<resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
-    <dimen name="app_bar_height">180dp</dimen>
-    <dimen name="text_margin">16dp</dimen>
-</resources>
+<com.github.takahirom.webview_in_coodinator_layout.NestedWebView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/web_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.github.takahirom.webview_in_coodinator_layout.ScrollingActivity"
+    tools:showIn="@layout/activity_scrolling"/>
