@@ -39,20 +39,6 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    <!--app:layout_behavior="com.github.takahirom.webview_in_coodinator_layout.ScrollBehavior"-->
-
-    <!--<android.support.v4.widget.NestedScrollView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
-
-    <!--<WebView-->
-    <!--android:id="@+id/web_view"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:background="#55ff0000" />-->
-    <!--</android.support.v4.widget.NestedScrollView>-->
-
 
     <com.github.takahirom.webview_in_coodinator_layout.NestedWebView
         android:id="@+id/web_view"
