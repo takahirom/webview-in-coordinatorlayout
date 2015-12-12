@@ -24,18 +24,12 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 
-public class LinearLayoutBehavior extends CoordinatorLayout.Behavior<LinearLayout> {
+public class BottomBarBehavior extends CoordinatorLayout.Behavior<LinearLayout> {
 
     private int defaultDependencyTop = -1;
 
-    public LinearLayoutBehavior(Context context, AttributeSet attrs) {
+    public BottomBarBehavior(Context context, AttributeSet attrs) {
         super(context, attrs);
-    }
-
-    @Override
-    public boolean onStartNestedScroll(final CoordinatorLayout coordinatorLayout, final LinearLayout child,
-                                       final View directTargetChild, final View target, final int nestedScrollAxes) {
-        return nestedScrollAxes == ViewCompat.SCROLL_AXIS_VERTICAL;
     }
 
     @Override

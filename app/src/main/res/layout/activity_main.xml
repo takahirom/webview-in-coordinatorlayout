@@ -52,7 +52,7 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_gravity="bottom"
         android:background="#550000ff"
-        app:layout_behavior="com.github.takahirom.webview_in_coodinator_layout.LinearLayoutBehavior">
+        app:layout_behavior="com.github.takahirom.webview_in_coodinator_layout.BottomBarBehavior">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar2"
