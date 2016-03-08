@@ -37,7 +37,7 @@ public class NestedWebView extends WebView implements NestedScrollingChild {
     }
 
     public NestedWebView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        this(context, attrs, android.R.attr.webViewStyle);
     }
 
     public NestedWebView(Context context, AttributeSet attrs, int defStyleAttr) {
