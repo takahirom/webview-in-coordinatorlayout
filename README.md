@@ -1,6 +1,7 @@
 webview-in-coordinator-layout
-----
+-----------------------------
 
+![coordinator-screen-image](https://cloud.githubusercontent.com/assets/1386930/13979570/b7235d0a-f11c-11e5-80e0-5ab6faa683e2.gif)
 
 ```
 Copyright (C) 2015 takahirom
