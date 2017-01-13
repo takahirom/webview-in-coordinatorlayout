@@ -46,10 +46,10 @@ public class NestedWebView extends WebView implements NestedScrollingChild {
         setNestedScrollingEnabled(true);
     }
 
+    boolean nestedScrolled = false;
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         boolean returnValue = false;
-
         MotionEvent event = MotionEvent.obtain(ev);
         final int action = MotionEventCompat.getActionMasked(event);
         if (action == MotionEvent.ACTION_DOWN) {
@@ -65,16 +65,20 @@ public class NestedWebView extends WebView implements NestedScrollingChild {
                     deltaY -= mScrollConsumed[1];
                     mLastY = eventY - mScrollOffset[1];
                     event.offsetLocation(0, -mScrollOffset[1]);
-                    mNestedOffsetY += mScrollOffset[1];
+                    mNestedOffsetY = mScrollOffset[1];
                 }
                 returnValue = super.onTouchEvent(event);
 
                 // NestedScroll
-                if (dispatchNestedScroll(0, mScrollOffset[1], 0, deltaY, mScrollOffset)) {
+                if (dispatchNestedScroll(0, mScrollConsumed[1], 0, deltaY, mScrollOffset)) {
                     event.offsetLocation(0, mScrollOffset[1]);
-                    mNestedOffsetY += mScrollOffset[1];
-                    mLastY -= mScrollOffset[1];
+                    mNestedOffsetY = mScrollOffset[1];
+                    mLastY -= deltaY;
+                    nestedScrolled = true;
+                }else {
+                    nestedScrolled = false;
                 }
+
                 break;
             case MotionEvent.ACTION_DOWN:
                 returnValue = super.onTouchEvent(event);
